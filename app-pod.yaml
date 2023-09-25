@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: poc-cache-pod
+spec:
+  containers:
+    - name: poc-cache-container
+      image: cache_viacep:latest
