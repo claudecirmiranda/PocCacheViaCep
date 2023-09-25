@@ -1,4 +1,5 @@
-As principais dependências e suas funções:
+Essas são as principais dependências que contribuem para o funcionamento do projeto, desde a configuração básica do Spring Boot até a integração com o Redis e o suporte à programação reativa com o Spring WebFlux. É importante certificar de que as versões dessas dependências sejam compatíveis entre si e estejam alinhadas com os requisitos do projeto.
+
 
 1.  **spring-boot-starter**: Essa dependência é a base do Spring Boot e fornece configurações básicas para a criação de aplicativos Spring. Ela inclui várias outras dependências transitivas que são essenciais para um aplicativo Spring Boot funcionar corretamente. Isso inclui o núcleo do Spring Framework e módulos relacionados, como Spring Core, Spring Context, Spring Beans, entre outros. É fundamental para a inicialização e execução do aplicativo Spring Boot.
     
@@ -14,5 +15,3 @@ As principais dependências e suas funções:
     
 7.  **lombok**: O Lombok é uma biblioteca que simplifica a criação de código Java, reduzindo a necessidade de escrever código boilerplate, como getters, setters e construtores. Ele é frequentemente usado para melhorar a legibilidade e a concisão do código. A anotação `@Getter`, por exemplo, é usada para gerar automaticamente métodos getters para campos de classe.
     
-
-Essas são as principais dependências que contribuem para o funcionamento do projeto, desde a configuração básica do Spring Boot até a integração com o Redis e o suporte à programação reativa com o Spring WebFlux. É importante certificar de que as versões dessas dependências sejam compatíveis entre si e estejam alinhadas com os requisitos do projeto.
