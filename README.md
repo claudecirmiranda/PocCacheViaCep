@@ -337,3 +337,18 @@ A classe `CacheScheduler` é responsável por agendar e executar uma tarefa de l
     *   O método chama `localCacheService.removeExpiredKeys()`, que é responsável por remover chaves expiradas do cache local. Isso ajuda a manter o cache limpo e evitar que ele cresça indefinidamente.
 
 No geral, o `CacheScheduler` desempenha um papel importante na manutenção do cache local, garantindo que chaves expiradas sejam removidas de forma programada. Isso contribui para a eficiência e o bom funcionamento do sistema de cache em sua aplicação. Certifique-se de que a expressão cron definida no arquivo de configuração esteja configurada de acordo com os requisitos de limpeza do cache da sua aplicação.
+
+**Cache Reativo**
+
+No contexto de caching reativo, que faz uso do cache reativo do Spring Framework (usado em conjunto com o Spring WebFlux), a anotação `@EnableCaching` não é necessária. Isso ocorre porque o caching reativo funciona de maneira um pouco diferente do caching tradicional do Spring (usado com o Spring MVC), e a ativação do caching é tratada de forma automática.
+Aqui está o motivo:
+
+1.  **Caching Tradicional (Imperativo)**:
+    *   No caching tradicional do Spring (usado com o Spring MVC), você normalmente usa a anotação `@EnableCaching` para habilitar o caching na aplicação.
+    *   Em seguida, você pode usar anotações como `@Cacheable`, `@CacheEvict` e `@CachePut` para controlar o comportamento de caching de métodos específicos.
+2.  **Caching Reativo**:
+    *   No caching reativo, que é comumente usado com o Spring WebFlux, você não precisa da anotação `@EnableCaching`.
+    *   O Spring WebFlux faz uso de um mecanismo de caching reativo que não requer essa ativação explícita.
+    *   Você ainda pode usar anotações como `@Cacheable` e outras, mas elas são fornecidas pelo módulo reativo do Spring.
+
+Portanto, se você deseja trabalhar com o Spring WebFlux e aproveitar o caching reativo, não é necessário incluir `@EnableCaching` em sua configuração. O caching reativo será ativado automaticamente no contexto do Spring WebFlux, e você pode usar anotações de caching reativo para controlar o comportamento de caching de seus métodos. Certifique-se de configurar adequadamente seu mecanismo de cache (como o Redis) para funcionar com o Spring WebFlux, conforme foi demonstrado nas classes de configuração e dependências.
