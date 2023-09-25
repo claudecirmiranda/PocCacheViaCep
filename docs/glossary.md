@@ -1,3 +1,5 @@
+Este glossário resume os principais termos e conceitos relacionados a aplicação da POC, especialmente aqueles relacionados à programação reativa, cache e tecnologias Spring utilizadas.
+
 1.  **Spring Boot**:
     *   Um projeto do ecossistema Spring que simplifica o desenvolvimento de aplicativos Spring, fornecendo convenções e configurações padrão.
 2.  **Spring WebFlux**:
@@ -24,5 +26,3 @@
     *   Uma API externa usada para consultar informações de endereço com base em CEPs fornecidos.
 13.  **ADR (Architecture Decision Record)**:
     *   Um documento que registra decisões arquiteturais importantes tomadas durante o desenvolvimento de um sistema ou aplicativo, documentando o contexto, as decisões e as justificativas.
-
-Este glossário resume os principais termos e conceitos relacionados a aplicação da POC, especialmente aqueles relacionados à programação reativa, cache e tecnologias Spring utilizadas.
