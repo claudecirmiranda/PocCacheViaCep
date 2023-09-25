@@ -28,8 +28,6 @@ Para executar a aplicação, siga estas etapas:
     
 3.  Execute o seguinte comando Maven para iniciar a aplicação:
     
-    bashCopy code
-    
     `mvn spring-boot:run`
     
     Isso iniciará a aplicação Spring Boot.
@@ -48,21 +46,15 @@ Se você estiver usando o Redis como mecanismo de cache, pode verificar as chave
     
 2.  Execute o seguinte comando para acessar o terminal do container Docker do Redis:
     
-    bashCopy code
-    
     `docker exec -it <nome_do_container_redis> /bin/bash`
     
 3.  No terminal do container Redis, execute o seguinte comando para listar todas as chaves armazenadas em cache:
-    
-    bashCopy code
     
     `redis-cli KEYS *`
     
     Isso exibirá uma lista de chaves em cache.
     
 4.  Para ver o conteúdo de uma chave específica, execute o seguinte comando, substituindo `<chave>` pelo nome da chave que você deseja visualizar:
-    
-    bashCopy code
     
     `redis-cli GET "<chave>"`
     
