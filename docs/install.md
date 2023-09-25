@@ -7,9 +7,7 @@ Redis
 Para executar o projeto, você precisa ter um servidor Redis em execução. Existem três opções para configurar o Redis:
 
 1.  **Docker (Recomendado):** Você pode iniciar um container Docker com o Redis usando o seguinte comando:
-    
-    bashCopy code
-    
+        
     `docker run -p 6379:6379 -t -d redis:5.0.3`
     
     Isso iniciará um servidor Redis na porta 6379 em um container Docker.
