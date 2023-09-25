@@ -10,9 +10,9 @@ As principais dependências e suas funções:
     
 5.  **spring-boot-starter-data-redis** e **spring-boot-starter-data-redis-reactive**: Essas dependências são usadas para integração com o Redis, um sistema de armazenamento em cache e banco de dados em memória. Elas fornecem suporte tanto para programação reativa quanto para abordagens tradicionais. O `spring-boot-starter-data-redis` é usado para operações Redis não reativas, enquanto o `spring-boot-starter-data-redis-reactive` é usado para operações Redis reativas.
     
-6.  **spring-webflux**: Essa dependência é essencial para o uso do Spring WebFlux, que é uma estrutura de programação reativa para construção de aplicativos da web reativos. Ela fornece suporte para roteamento reativo, controladores funcionais e outros recursos reativos. No contexto do seu projeto, isso indica que você está usando o Spring WebFlux para lidar com a comunicação reativa.
+6.  **spring-webflux**: Essa dependência é essencial para o uso do Spring WebFlux, que é uma estrutura de programação reativa para construção de aplicativos da web reativos. Ela fornece suporte para roteamento reativo, controladores funcionais e outros recursos reativos. No contexto do projeto, isso indica que o udo do Spring WebFlux para lidar com a comunicação reativa.
     
 7.  **lombok**: O Lombok é uma biblioteca que simplifica a criação de código Java, reduzindo a necessidade de escrever código boilerplate, como getters, setters e construtores. Ele é frequentemente usado para melhorar a legibilidade e a concisão do código. A anotação `@Getter`, por exemplo, é usada para gerar automaticamente métodos getters para campos de classe.
     
 
-Essas são as principais dependências que contribuem para o funcionamento do projeto, desde a configuração básica do Spring Boot até a integração com o Redis e o suporte à programação reativa com o Spring WebFlux. Certifique-se de que as versões dessas dependências sejam compatíveis entre si e estejam alinhadas com os requisitos do seu projeto.
+Essas são as principais dependências que contribuem para o funcionamento do projeto, desde a configuração básica do Spring Boot até a integração com o Redis e o suporte à programação reativa com o Spring WebFlux. É importante certificar de que as versões dessas dependências sejam compatíveis entre si e estejam alinhadas com os requisitos do projeto.
