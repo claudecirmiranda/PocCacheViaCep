@@ -6,48 +6,7 @@ Nesta apresentação, exploraremos uma solução de autenticação e autorizaç�
 Diagrama de sequência do uso da solução:
 ----------------------------------------
 
-:::mermaid
-sequenceDiagram
-    participant Frontend as Front-end
-    participant Backend as Back-end
-    participant AuthAPI as API de Autenticação/ Autorização
-    participant OracleVault as Oracle Cloud Infrastructure Vault
-    participant NagemAPI as API da Nagem
-
-    Frontend->>Frontend: Fornecimento de Credenciais
-    Frontend->>Frontend: Autenticação MFA
-    Frontend->>Frontend: Solicitação de Token Assinado
-    Frontend->>AuthAPI: Chama sgainteg/signed-token
-    AuthAPI->>AuthAPI: Validação do Token do AD
-    AuthAPI->>OracleVault: Geração de Token Assinado
-    AuthAPI->>AuthAPI: Cache de Token
-    AuthAPI->>Frontend: Retorna Token Assinado
-    Frontend->>Frontend: Cache de Token
-    Frontend->>Frontend: Solicitação de Lista de Acessos
-    Frontend->>AuthAPI: Chama sgainteg/getaccess com Token Assinado
-    AuthAPI->>AuthAPI: Validação da Lista de Acessos
-    AuthAPI->>AuthAPI: Cache de Lista de Acessos
-    AuthAPI->>Frontend: Retorna Lista de Acessos
-    Frontend->>Frontend: Cache de Lista de Acessos
-    Frontend->>Frontend: Gerenciamento de Acessos
-    Frontend->>Frontend: Tratamento de falhas
-
-    Backend->>Backend: Autenticação Back-end
-    Backend->>AuthAPI: Chama sgainteg/login
-    AuthAPI->>AuthAPI: Validação de Credenciais
-    AuthAPI->>OracleVault: Geração de Token Assinado
-    AuthAPI->>AuthAPI: Cache de Token
-    AuthAPI->>Backend: Retorna Token Assinado
-    Backend->>Backend: Cache de Token
-    Backend->>NagemAPI: Chamada à API da Nagem com Token Assinado
-    Backend->>AuthAPI: Solicitação de Lista de Acessos
-    AuthAPI->>AuthAPI: Validação da Lista de Acessos
-    AuthAPI->>AuthAPI: Cache de Lista de Acessos
-    AuthAPI->>Backend: Retorna Lista de Acessos
-    Backend->>Backend: Cache de Lista de Acessos
-    Backend->>Backend: Gerenciamento de Acessos
-    Backend->>Backend: Tratamento de falhas
-:::
+![ds_auth](https://github.com/claudecirmiranda/PocCacheViaCep/assets/70034435/8310f829-7564-4f87-ab22-940a361af0f2)
 
 
 Fluxo de Funcionamento
